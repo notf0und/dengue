@@ -20,7 +20,14 @@ const Article: React.FC = () => {
 
 
     return (
-        <>
+        <div style={
+            {
+                padding: '0rem 2rem',
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '1.5rem',
+            }
+        }>
             <List dataSource={item.content}
                 header={<Typography.Title level={3}>{item.label}</Typography.Title>}
                 renderItem={(item) => <List.Item>
@@ -30,7 +37,7 @@ const Article: React.FC = () => {
             </List>
             <Image src={item.media_details}></Image>
             <Divider />
-        </>
+        </div>
     );
 };
 

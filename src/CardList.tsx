@@ -17,34 +17,45 @@ const CardList: React.FC = () => {
 
 
     return (
-        <List
-            grid={{
-                gutter: 24,
-            }}
-            dataSource={items}
-            renderItem={(item) => (
-                <List.Item>
-                    <Card
-                        style={{ width: '20rem', maxWidth: '350px' }}
-                        onClick={() => navigate(item.children ? `/articles/${item.key}` : `/article/${item.key}`)}
-                        hoverable
-                        cover={item?.media && (
-                            <img
-                                alt={`${item.key}-image`}
-                                src={item.media?.startsWith('/') && import.meta.env.PROD ? `/dengue${item.media}` : item.media}
-                                style={{
-                                    maxHeight: '12rem',
-                                    objectFit: 'cover'
-                                }}
-                            />
-                        )}
-                    >
-                        <Card.Meta title={item.label} />
+        <div style={
+            {
+                padding: '2rem',
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '1.5rem',
 
-                    </Card>
-                </List.Item>
-            )}
-        />
+            }
+        }>
+
+            <List
+                grid={{
+                    gutter: 24,
+                }}
+                dataSource={items}
+                renderItem={(item) => (
+                    <List.Item>
+                        <Card
+                            style={{ width: '20rem', maxWidth: '350px' }}
+                            onClick={() => navigate(item.children ? `/articles/${item.key}` : `/article/${item.key}`)}
+                            hoverable
+                            cover={item?.media && (
+                                <img
+                                    alt={`${item.key}-image`}
+                                    src={item.media?.startsWith('/') && import.meta.env.PROD ? `/dengue${item.media}` : item.media}
+                                    style={{
+                                        maxHeight: '12rem',
+                                        objectFit: 'cover'
+                                    }}
+                                />
+                            )}
+                        >
+                            <Card.Meta title={item.label} />
+
+                        </Card>
+                    </List.Item>
+                )}
+            />
+        </div>
 
     );
 

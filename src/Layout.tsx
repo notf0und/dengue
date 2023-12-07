@@ -1,5 +1,5 @@
 import { LeftOutlined } from '@ant-design/icons';
-import { Button, Layout as ReactLayout, Space, Typography, theme } from 'antd';
+import { Button, FloatButton, Layout as ReactLayout, Space, Typography, theme } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 import React from 'react';
 import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -58,11 +58,14 @@ const Layout: React.FC = () => {
   return (
     <ReactLayout style={{ minHeight: "100vh" }
     } >
-      <Header style={
-        {
-          display: 'flex', alignItems: 'center', width: '100%', gap: '1rem'
-        }
-      }>
+      <Header style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 1,
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+      }}>
         <Space>
           {pathname !== '/' && <Button
             style={{ verticalAlign: 'middle', marginTop: '8px' }}
@@ -76,42 +79,32 @@ const Layout: React.FC = () => {
         </Space>
       </Header>
 
-      < Content style={{ padding: '2rem 1rem', justifyContent: 'center' }}>
+      < Content style={{
+        padding: '2rem 1rem',
+        justifyContent: 'center'
+      }}
+      >
         <div
           style={
             {
               background: colorBgContainer,
-              borderRadius: borderRadiusLG, justifyContent: 'center'
+              borderRadius: borderRadiusLG,
 
             }
           }
         >
-          <div style={
-            {
-              padding: '2rem',
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '1.5rem',
-              // minHeight: '600px',
-              justifyContent: 'center', // Add this line for horizontal centering
-              alignItems: 'center', alignContent: 'center',
-              alignSelf: 'center'
-            }
-          }>
-            <Routes>
 
-              <Route index element={<CardList />}></Route>
-              <Route path="/article/:articleId" element={<Article />}></Route>
-              <Route path="/articles/:itemKey" element={<CardList />}></Route>
+          <Routes>
 
-            </Routes>
-            {/* <Route path="/article/:articleId" element={<Article />}></Route> */}
-            {/* {!selectedPage ?
-              <CardList items={items} onSelect={setSelectedPage} /> :
-              <Article item={selectedPage} />
-            } */}
-          </div>
+            <Route index element={<CardList />}></Route>
+            <Route path="/article/:articleId" element={<Article />}></Route>
+            <Route path="/articles/:itemKey" element={<CardList />}></Route>
+
+          </Routes>
+
+          <FloatButton.BackTop />
         </div>
+
       </Content>
     </ReactLayout >
   );

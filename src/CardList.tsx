@@ -1,13 +1,20 @@
-import { Card, List, Typography } from 'antd';
-import * as React from 'react';
-import { MenuItem } from './Layout';
+import { Card, List } from 'antd';
+import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { findElementByKey, MenuItem } from './Layout';
+import data from './data.json';
 
-interface CardListProps {
-    items: MenuItem[];
-    onSelect: (item: MenuItem) => void
-}
 
-const CardList: React.FC<CardListProps> = ({ items, onSelect }) => {
+
+const CardList: React.FC = () => {
+    const { itemKey } = useParams();
+    const navigate = useNavigate()
+    const items: MenuItem[] = (
+        itemKey ?
+            findElementByKey(data, itemKey, (article) => article.key === itemKey)?.children as MenuItem[] :
+            data
+    );
+
 
     return (
         <List
@@ -24,23 +31,28 @@ const CardList: React.FC<CardListProps> = ({ items, onSelect }) => {
             renderItem={(item) => (
                 <List.Item>
                     <Card
-                        style={{ maxWidth: '420px' }}
-                        onClick={() => onSelect(item)}
+                        style={{ width: '20rem', maxWidth: '350px' }}
+                        onClick={() => navigate(item.children ? `/articles/${item.key}` : `/article/${item.key}`)}
                         hoverable
                         cover={item?.media && (<img
                             alt={`${item.key}-image`}
                             src={item.media}
+                            style={{
+                                maxHeight: '12rem',
+                                objectFit: 'cover'
+                            }}
                         />)}
                     >
                         <Card.Meta
                             title={item.label}
-                            description={<Typography.Text ellipsis>{item?.content?.[0]}</Typography.Text>}
                         />
 
                     </Card>
                 </List.Item>
             )}
-        />);
+        />
+
+    );
 
 };
 

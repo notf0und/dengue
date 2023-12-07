@@ -1,7 +1,10 @@
 import { ConfigProvider } from 'antd';
 import * as React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
 import './styles.css';
+
+
 
 const App: React.FC = () => {
 
@@ -31,9 +34,9 @@ const App: React.FC = () => {
         }
       }}
     >
-
-      <Layout />
-
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
     </ConfigProvider>
   );
 };

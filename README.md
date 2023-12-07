@@ -18,7 +18,7 @@ Para acceder a la aplicación web, haz clic [aquí](https://notf0und.github.io/d
 ## Colaboradores
 
 - **Cintia Artur**: Idea y diseño
-- **@notf0und**: Codigo, refinamiento técnico
+- **[@notf0und](https://github.com/notf0und)**: Codigo, refinamiento técnico
 
 ## Retroalimentación y Contribuciones
 
@@ -49,7 +49,7 @@ To access the web app, click [here](https://notf0und.github.io/dengue/).
 ## Contributors
 
 - **Cintia Artur**: Idea and design
-- **notf0und**: Coding & Technical refinement
+- **[@notf0und](https://github.com/notf0und)**: Coding & Technical refinement
 
 ---
 

@@ -2,7 +2,7 @@ import { LeftOutlined } from '@ant-design/icons';
 import { Button, FloatButton, Layout as ReactLayout, Space, Typography, theme } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 import React from 'react';
-import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Article from './Article';
 import CardList from './CardList';
 
@@ -21,12 +21,10 @@ export interface MenuItem {
 
 export const findElementByKey = (elements: MenuItem[], key: string, searchCallback: (element: MenuItem) => boolean): MenuItem | undefined => {
   for (const element of elements) {
-    // Check if the element's key matches the search key
     if (searchCallback(element)) {
       return element; // Return the element if found
     }
 
-    // If the element has children, recursively search in its children
     if (element.children) {
       const foundChild = findElementByKey(element.children, key, searchCallback);
       if (foundChild) {
@@ -35,7 +33,6 @@ export const findElementByKey = (elements: MenuItem[], key: string, searchCallba
     }
   }
 
-  // Return undefined if the element is not found
   return undefined;
 };
 
@@ -46,11 +43,7 @@ const Layout: React.FC = () => {
   } = theme.useToken();
 
   const navigate = useNavigate();
-  const location = useLocation();
-  const params = useParams();
-  const { pathname } = location;
-
-  console.log({ params, location, env: import.meta.env.PROD })
+  const { pathname } = useLocation();
 
 
 

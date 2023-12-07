@@ -1,6 +1,6 @@
 import { ConfigProvider } from 'antd';
 import * as React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
 import ScrollToTop from './ScrollToTop';
 import './styles.css';
@@ -22,10 +22,10 @@ const App: React.FC = () => {
         }
       }}
     >
-      <HashRouter basename={import.meta.env.PROD ? "/dengue" : '/'}>
+      <BrowserRouter basename={import.meta.env.PROD ? "/dengue" : '/'}>
         <ScrollToTop />
         <Layout />
-      </HashRouter>
+      </BrowserRouter>
     </ConfigProvider>
   );
 };

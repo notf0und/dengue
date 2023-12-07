@@ -31,7 +31,7 @@ const CardList: React.FC = () => {
                         cover={item?.media && (
                             <img
                                 alt={`${item.key}-image`}
-                                src={item.media?.startsWith('/') && import.meta.env.DEV ? `/dengue${item.media}` : item.media}
+                                src={item.media?.startsWith('/') && import.meta.env.PROD ? `/dengue${item.media}` : item.media}
                                 style={{
                                     maxHeight: '12rem',
                                     objectFit: 'cover'

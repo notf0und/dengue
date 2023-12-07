@@ -9,12 +9,13 @@ import data from './data.json';
 
 const Article: React.FC = () => {
 
-    const { articleId } = useParams();
+    const params = useParams();
 
+    const { articleId } = params;
+    console.log({ params })
 
     const item = findElementByKey(data, String(articleId), (article) => article.key === articleId) as MenuItem
 
-    console.log({ item })
 
 
 

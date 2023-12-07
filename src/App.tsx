@@ -34,7 +34,7 @@ const App: React.FC = () => {
         }
       }}
     >
-      <BrowserRouter>
+      <BrowserRouter basename="/dengue">
         <Layout />
       </BrowserRouter>
     </ConfigProvider>

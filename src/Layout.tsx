@@ -2,7 +2,7 @@ import { LeftOutlined } from '@ant-design/icons';
 import { Button, Layout as ReactLayout, Space, Typography, theme } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 import React from 'react';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import Article from './Article';
 import CardList from './CardList';
 
@@ -46,7 +46,12 @@ const Layout: React.FC = () => {
   } = theme.useToken();
 
   const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const params = useParams();
+  const { pathname } = location;
+
+  console.log({ params, location, env: import.meta.env.PROD })
+
 
 
 

@@ -1,0 +1,58 @@
+[
+    {
+        "label": "Que es el dengue?",
+        "description": "El dengue es una enfermedad causada por un virus...",
+        "key": "que-es",
+        "media": "https://cmsphoto.ww-cdn.com/superstatic/3746339/art/grande/79009547-57285518.jpg",
+        "content": [
+            "El dengue es una enfermedad causada por un virus que se transmite a través de la picadura de un mosquito perteneciente al género Aedes, principalmente el Aedes aegypti, vector de la enfermedad. Este mosquito tiene hábitos domiciliarios, por lo que la transmisión es predominantemente doméstica. En otros continentes, otras especies de mosquitos del genero Aedes han sido involucradas en la transmisión del dengue.",
+            "El virus del dengue pertenece a la familia Flaviviridae y existen cuatro variantes, los serotipos 1,2, 3 y 4. La inmunidad es serotipo-específica por lo que la infección con un serotipo determinado confiere inmunidad permanente contra el mismo (inmunidad homóloga), y sólo por unos meses contra el resto de los serotipos (inmunidad heteróloga). Aunque, en teoría, una persona podría padecer dengue hasta cuatro veces a lo largo de su vida (una por cada serotipo), hasta el momento solo se han comprobado hasta tres infecciones en un mismo individuo.",
+            "Cualquier serotipo puede producir formas graves de la enfermedad, aunque los serotipos 2 y 3 han sido asociados a la mayor cantidad de casos graves y fallecidos.",
+            "El dengue es un problema creciente para la Salud Pública mundial, debido a varios factores: el cambio climático, el aumento de la población mundial en áreas urbanas de ocurrencia rápida y desorganizada, la insuficiente provisión de agua potable que obliga a su almacenamiento en recipientes caseros habitualmente descubiertos, la inadecuada recolección de residuos y la gran producción de recipientes descartables que sirven como criaderos de mosquitos al igual que los neumáticos desechados."
+        ]
+    },
+    {
+        "label": "Síntomas compatibles con el dengue",
+        "media": "https://cmsphoto.ww-cdn.com/superstatic/3746339/art/grande/79009894-57285622.jpg",
+        "key": "sintomas-compatibles",
+        "content": [
+            "La infección por dengue puede ser clínicamente inaparente o puede causar una enfermedad de variada intensidad. Luego de un período de incubación que puede ser de 5 a 7 días, (se han observado casos con un período de incubación de 3 hasta 14 días), podrán aparecer las manifestaciones clínicas, aunque una alta proporción de las personas infectadas cursarán de manera asintomática.",
+            "Las infecciones sintomáticas pueden variar desde formas leves de la enfermedad, que solo se manifiestan con un cuadro febril agudo, de duración limitada (2 a 7 días) a otros cuya fiebre se asocia a intenso malestar general, cefalea, dolor retro ocular, dolor muscular y dolores articulares.",
+            "En no más del 50% de los casos estos síntomas pueden acompañarse de un exantema en la mayoría de los casos pruriginoso, no patognomónico.",
+            "Algunos casos de dengue pueden evolucionar a formas graves (dengue grave) en las que hay manifestaciones hemorrágicas, pérdida de plasma debida al aumento de la permeabilidad vascular,(lo que ocasiona un incremento del hematocrito) y presencia de colecciones líquidas en cavidades serosas (derrame pleural, ascitis y derrame pericárdico), lo que puede llevar a un cuadro de shock.Los casos de dengue grave son más frecuentes en personas que ya padecieron dengue por un serotipo (infección primaria) y se infectan nuevamente (infección secundaria) con un serotipo diferente al que le ocasionó el primer cuadro. Este fenómeno puede ocurrir hasta muchos años después de ocurrida la infección primaria, pero no implica necesariamente que toda infección secundaria conduzca a dengue grave. No obstante, también la infección primaria puede asociarse a dengue grave, en relación a virulencia de la cepa o a otros factores del hospedero.",
+            "Finalmente, existen otras formas clínicas de dengue menos frecuentes, que se caracterizan por la afectación especialmente intensa de un órgano o sistema: encefalitis, miocarditis, hepatopatía, y afectación renal con insuficiencia renal aguda."
+        ]
+    },
+    {
+        "label": "Signos de alarma",
+        "media": "https://cmsphoto.ww-cdn.com/superstatic/3746339/art/grande/79011051-57286104.jpg",
+        "key": "signos-de-alarma"
+    },
+    {
+        "label": "Fases de la enfermedad",
+        "media": "https://cmsphoto.ww-cdn.com/superstatic/3746339/art/grande/79011175-57286206.jpg",
+        "key": "fases"
+    },
+    {
+        "label": "Prevención",
+        "key": "prevención",
+        "children": [
+            {
+                "label": "Cómo protegernos de la picadura del mosquito",
+                "key": "como-proteger"
+            },
+            {
+                "label": "Cómo podemos prevenir el dengue",
+                "key": "compo-prevenir"
+            }
+        ]
+    },
+    {
+        "label": "¿Qué medidas tomar en casa?",
+        "key": "medidas"
+    },
+    {
+        "label": "Centros de contacto",
+        "key": "contacto"
+    }
+]

@@ -1,0 +1,25 @@
+/* @media screen and (max-width: 768px) {
+    .ant-layout-content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .ant-layout-content {
+        width: 600px;
+    }
+}
+
+.ant-menu {
+    border-inline-end: none !important;
+} */
+
+
+.ant-card-cover {
+    img {
+        /* max-height: 200px;
+        max-width: 200px; */
+        overflow: hidden;
+
+    }
+}

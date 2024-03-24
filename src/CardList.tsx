@@ -20,12 +20,6 @@ const CardList: React.FC = () => {
         <List
             grid={{
                 gutter: 24,
-                // xs: 8,
-                // sm: 7,
-                // md: 6,
-                // lg: 5,
-                // xl: 4,
-                // xxl: 3,
             }}
             dataSource={items}
             renderItem={(item) => (
@@ -34,18 +28,18 @@ const CardList: React.FC = () => {
                         style={{ width: '20rem', maxWidth: '350px' }}
                         onClick={() => navigate(item.children ? `/articles/${item.key}` : `/article/${item.key}`)}
                         hoverable
-                        cover={item?.media && (<img
-                            alt={`${item.key}-image`}
-                            src={item.media}
-                            style={{
-                                maxHeight: '12rem',
-                                objectFit: 'cover'
-                            }}
-                        />)}
+                        cover={item?.media && (
+                            <img
+                                alt={`${item.key}-image`}
+                                src={item.media?.startsWith('/') && import.meta.env.DEV ? `/dengue${item.media}` : item.media}
+                                style={{
+                                    maxHeight: '12rem',
+                                    objectFit: 'cover'
+                                }}
+                            />
+                        )}
                     >
-                        <Card.Meta
-                            title={item.label}
-                        />
+                        <Card.Meta title={item.label} />
 
                     </Card>
                 </List.Item>

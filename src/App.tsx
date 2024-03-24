@@ -34,7 +34,7 @@ const App: React.FC = () => {
         }
       }}
     >
-      <BrowserRouter basename="/dengue">
+      <BrowserRouter basename={import.meta.env.PROD ? "/dengue" : '/'}>
         <Layout />
       </BrowserRouter>
     </ConfigProvider>
